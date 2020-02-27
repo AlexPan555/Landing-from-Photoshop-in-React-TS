@@ -1,0 +1,55 @@
+.advantages {
+padding-top: 80px;
+padding-bottom: 80px;
+background-color: #252525;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+}
+.item {
+text-decoration: none;
+}
+
+.icon {
+
+}
+.icon::after {
+    content: ' ';
+    height: 2px;
+    width: 70px;
+    background-color: #e5493a ;
+    display: block;
+}
+.img {
+
+align-items: center;
+    border: 1px solid #353535;
+    border-radius: 50%;
+    width: 100px;
+  height: 100px;
+  position: relative;
+}
+.svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+
+}
+.h1 {
+        font-size: 18px;
+        font-family: "Raleway";
+        color: rgb(99, 99, 99);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.111;
+        text-align: left;
+      }
+.p {
+        font-size: 14px;
+        font-family: "Roboto";
+        color: rgb(85, 85, 85);
+        line-height: 1.429;
+        text-align: left;
+}
+
+
