@@ -1,66 +1,107 @@
-import React, {useState} from 'react'
+import React, { useReducer} from 'react'
 import classes from './Advantages.module.css'
 import {NavLink} from 'react-router-dom'
-import {useSpring, animated} from 'react-spring'
 import list from '../../img/icons/list.svg'
 import list_red from '../../img/icons/list _red.svg'
 import branding from '../../img/icons/branding.svg'
+import branding_red from '../../img/icons/branding_red.svg'
 import responsive from '../../img/icons/responsive.svg'
+import responsive_red from '../../img/icons/responsive_red.svg'
 import developem from '../../img/icons/developm.svg'
+import developmen_red from '../../img/icons/developm_red.svg'
+import AdvantagesItem from './AdvantagesItem'
 
 const Advantages: React.FC = () =>{
-   
-    const [hover, changeHover] = useState(false)
+ 
+ const initialState: object = {
+     listState: {
+        img: list,
+        imgRed: list_red,
+        isOver: false,
+        h1: 'Clean Design',
+        p: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.'
+     },
+     brandingState: {
+        img: branding,
+        imgRed: branding_red,
+        isOver: false,
+        h1: 'Branding',
+        p: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.'
+     },
+     responsiveState: {
+        img: responsive,
+        imgRed: responsive_red,
+        isOver: false,
+        h1: 'Responsive',
+        p: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.'
+     },
+     developmenState: {
+        img: developem,
+        imgRed: developmen_red,
+        isOver: false,
+        h1: 'Clean Design',
+        p: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.'
+     }
+ }
+ function reducer(state: any, action: any){
+     switch(action.type) {
+         case 'hoverList' :
+             state.listState.isOver = true
+                return {...state  }
+        case 'outList' : 
+            state.listState.isOver = false
+                return {...state }
+
+        case 'hoverBranding':
+            state.brandingState.isOver = true
+                return {...state}
+        case 'outBranding' :
+            state.brandingState.isOver = false
+                return {...state }
+
+        case 'hoverResponsive':
+            state.responsiveState.isOver = true
+                return {...state}
+        case 'outResponsive' :
+            state.responsiveState.isOver = false
+                return {...state }
+
+        case 'hoverDevelopmen':
+            state.developmenState.isOver = true
+                return {...state}
+        case 'outDevelopmen' :
+            state.developmenState.isOver = false
+                return {...state }
+
+        default:  return {...state};
+     }
+ }
+
+ const [state, dispatch] = useReducer(reducer, initialState);  
+console.log('state', state)
     const styleDiv = `${classes.advantages} wrap`
-    const propsMotion = useSpring({opacity: hover? 1 : 0 })
-    const colorRedMotion = useSpring({color: hover? '#e5493a'  : 'rgb(99, 99, 99)'})
-    const colorWhiteMotion = useSpring({color: hover? 'white'  : 'rgb(99, 99, 99)'})
-    const handleOver = () =>{
-        console.log('over')
-        changeHover(true)
-    }
-    const handleOut = () =>{
-        console.log('out')
-        changeHover(false)
-    }
+   
+
     return(
         <section className={styleDiv}>
-<NavLink to='/' className={classes.item} onMouseOver={handleOver} onMouseOut={handleOut} >
-    <div className={classes.icon} >
-        <div className={classes.img} >
-            <img className={classes.svg} src={list} alt='icon list'/> 
-            <animated.img style={propsMotion} className={classes.svg} src={list_red} alt='icon list'/> 
-        </div>
-        <animated.h1 style={colorRedMotion} className={classes.h1}>Clean Design</animated.h1>
-        <animated.p style={colorWhiteMotion} className={classes.p}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.</animated.p>
-    </div>
+<NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverList'})} 
+  onMouseOut={()=>dispatch({type: 'outList'})} >
+    <AdvantagesItem state={state.listState} />
 </NavLink>
-<NavLink to='/' className={classes.item} >
-    <div className={classes.icon}>
-        <div className={classes.img}>
-          <img className={classes.svg} src={branding} alt='icon list'/>
-        </div>
-        <h1 className={classes.h1}>Branding</h1>
-        <p className={classes.p}>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
-    </div>
+
+<NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverBranding'})} 
+  onMouseOut={()=>dispatch({type: 'outBranding'})}>
+    <AdvantagesItem state={state.brandingState} />
 </NavLink>
-<NavLink to='/' className={classes.item} >
-    <div className={classes.icon}>
-        <div className={classes.img}>
-          <img className={classes.svg} src={responsive} alt='icon list'/>
-        </div>
-        <h1 className={classes.h1}>Responsive</h1>
-        <p className={classes.p}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.</p>
-    </div>
+
+<NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverResponsive'})} 
+  onMouseOut={()=>dispatch({type: 'outResponsive'})}>
+    <AdvantagesItem state={state.responsiveState} />
 </NavLink>
-<NavLink to='/' className={classes.item} >
-    <div className={classes.icon}>
-        <div className={classes.img}>
-          <img className={classes.svg} src={developem} alt='icon list'/>
-        </div>
-        <h1 className={classes.h1}>Development</h1>
-        <p className={classes.p}>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
-    </div>
+
+<NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverDevelopmen'})} 
+  onMouseOut={()=>dispatch({type: 'outDevelopmen'})}>
+    <AdvantagesItem state={state.developmenState} />
 </NavLink>
         </section>
     )
