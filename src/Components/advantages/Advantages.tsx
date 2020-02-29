@@ -1,6 +1,7 @@
 import React, { useReducer} from 'react'
 import classes from './Advantages.module.css'
 import {NavLink} from 'react-router-dom'
+import { OrderedMap} from 'immutable'
 import list from '../../img/icons/list.svg'
 import list_red from '../../img/icons/list _red.svg'
 import branding from '../../img/icons/branding.svg'
@@ -13,95 +14,84 @@ import AdvantagesItem from './AdvantagesItem'
 
 const Advantages: React.FC = () =>{
  
- const initialState: object = {
-     listState: {
+ const initialState = OrderedMap ({
+     listState: OrderedMap({
         img: list,
         imgRed: list_red,
         isOver: false,
         h1: 'Clean Design',
         p: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.'
-     },
-     brandingState: {
+     }),
+     brandingState: OrderedMap({
         img: branding,
         imgRed: branding_red,
         isOver: false,
         h1: 'Branding',
         p: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.'
-     },
-     responsiveState: {
+     }),
+     responsiveState: OrderedMap({
         img: responsive,
         imgRed: responsive_red,
         isOver: false,
         h1: 'Responsive',
         p: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.'
-     },
-     developmenState: {
+     }),
+     developmenState: OrderedMap({
         img: developem,
         imgRed: developmen_red,
         isOver: false,
         h1: 'Clean Design',
         p: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.'
-     }
- }
+     })
+ })
  function reducer(state: any, action: any){
      switch(action.type) {
          case 'hoverList' :
-             state.listState.isOver = true
-                return {...state  }
+            return state.setIn(['listState', 'isOver'], true )
         case 'outList' : 
-            state.listState.isOver = false
-                return {...state }
-
+            return state.setIn(['listState', 'isOver'], false )
+               
         case 'hoverBranding':
-            state.brandingState.isOver = true
-                return {...state}
+           return state.setIn(['brandingState', 'isOver'], true )
         case 'outBranding' :
-            state.brandingState.isOver = false
-                return {...state }
+            return state.setIn(['brandingState', 'isOver'], false )
 
         case 'hoverResponsive':
-            state.responsiveState.isOver = true
-                return {...state}
+            return state.setIn(['responsiveState', 'isOver'], true )
         case 'outResponsive' :
-            state.responsiveState.isOver = false
-                return {...state }
+            return state.setIn(['responsiveState', 'isOver'], false )
 
         case 'hoverDevelopmen':
-            state.developmenState.isOver = true
-                return {...state}
+            return state.setIn(['developmenState', 'isOver'], true )
         case 'outDevelopmen' :
-            state.developmenState.isOver = false
-                return {...state }
+            return state.setIn(['developmenState', 'isOver'], false )
 
         default:  return {...state};
      }
  }
-
  const [state, dispatch] = useReducer(reducer, initialState);  
-console.log('state', state)
     const styleDiv = `${classes.advantages} wrap`
-   
 
     return(
         <section className={styleDiv}>
 <NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverList'})} 
   onMouseOut={()=>dispatch({type: 'outList'})} >
-    <AdvantagesItem state={state.listState} />
+    <AdvantagesItem state={state.get('listState')} />
 </NavLink>
 
 <NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverBranding'})} 
   onMouseOut={()=>dispatch({type: 'outBranding'})}>
-    <AdvantagesItem state={state.brandingState} />
+    <AdvantagesItem state={state.get('brandingState')} />
 </NavLink>
 
 <NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverResponsive'})} 
   onMouseOut={()=>dispatch({type: 'outResponsive'})}>
-    <AdvantagesItem state={state.responsiveState} />
+    <AdvantagesItem state={state.get('responsiveState')} />
 </NavLink>
 
 <NavLink to='/' className={classes.item} onMouseOver={()=>dispatch({type: 'hoverDevelopmen'})} 
   onMouseOut={()=>dispatch({type: 'outDevelopmen'})}>
-    <AdvantagesItem state={state.developmenState} />
+    <AdvantagesItem state={state.get('developmenState')} />
 </NavLink>
         </section>
     )
