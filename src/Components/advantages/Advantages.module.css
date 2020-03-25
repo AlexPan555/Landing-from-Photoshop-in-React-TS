@@ -3,7 +3,8 @@ padding-top: 80px;
 padding-bottom: 80px;
 background-color: #252525;
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+grid-gap: 20px;
 }
 .item {
 text-decoration: none;
@@ -51,5 +52,17 @@ align-items: center;
         line-height: 1.429;
         text-align: left;
 }
+@media (max-width: 470px){
+  .advantages{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .img {
+    margin:  0 auto;
+  }
+  .h1, .p {
+    text-align: center;
+  }
 
+}
 

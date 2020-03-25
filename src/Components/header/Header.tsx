@@ -12,17 +12,17 @@ const Header: React.FC = () =>{
                 <NavLink className= {classes.header__logo} to='/' >
                     <img src={logo} alt="Logo"/>
                 </NavLink>
-                <nav>
-                    <ul className={classes.menu}>
+                <div>
+                    <ul className={classes._menu}>
                         <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Home </NavLink> </li>
                         <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Features </NavLink> </li>
                         <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Portfolio </NavLink> </li>
                         <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >SKILLS </NavLink> </li>  
                         <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Blog </NavLink> </li>  
                         <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >CLIENTS </NavLink> </li>  
-                        <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Contacts </NavLink> </li>   
+                        <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/test' >Contacts </NavLink> </li>   
                     </ul>
-                </nav>
+                </div>
             </div>
         </header>
     )
