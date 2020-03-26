@@ -1,4 +1,4 @@
-import list from '../../img/icons/list.svg'
+import lists from '../../img/icons/list.svg'
 import list_red from '../../img/icons/list _red.svg'
 import branding from '../../img/icons/branding.svg'
 import branding_red from '../../img/icons/branding_red.svg'
@@ -10,7 +10,7 @@ import developmen_red from '../../img/icons/developm_red.svg'
 export const stateData = 
     {
         listState: {
-            img: list,
+            img: lists,
             imgRed: list_red,
             isOver: false,
             h1: 'Clean Design',

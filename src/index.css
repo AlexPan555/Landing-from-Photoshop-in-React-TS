@@ -60,5 +60,16 @@ code {
 }
 .senter {
   text-align: center;
-
+}
+.work__item__three {
+  grid-column: span 3;
+}
+.work__item__foure {
+  grid-column: span 4;
+}
+.work__item__five {
+  grid-column: span 5;
+}
+.work__item__six {
+  grid-column: span 6;
 }

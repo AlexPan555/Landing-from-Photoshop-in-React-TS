@@ -14,7 +14,9 @@ const AdvantagesItem: React.FC<IProps>  = (props) => {
     const colorRedMotion = useSpring({color: state.get('isOver') ? '#e5493a'  : 'rgb(99, 99, 99)'})
     const colorWhiteMotion = useSpring({color: state.get('isOver') ? 'white'  : 'rgb(99, 99, 99)'})
     const borderRedMotion = useSpring({borderColor: state.get('isOver') ? '#e5493a' : '#353535' })
-  return(
+ console.log(props.state.get('img'));
+ 
+    return(
     <div className={classes.icon} >
         <animated.div style={borderRedMotion} className={classes.img} >
             <img className={classes.svg} src={props.state.get('img')} alt='icon list'/> 
