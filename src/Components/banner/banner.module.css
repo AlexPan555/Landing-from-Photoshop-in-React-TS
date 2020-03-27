@@ -45,6 +45,9 @@ margin-left: auto;
         margin-top: -1px;
       }
 .banner__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 53px;
     width: 168px;
     border: 5px solid #e5493a;
@@ -55,6 +58,8 @@ margin-left: auto;
         color: rgb(255, 255, 255);
         font-weight: bold;
         text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
         margin-right: 25px;
         margin-top: 20px;
         margin-bottom: 25px;
@@ -73,6 +78,9 @@ margin-left: auto;
     border: 5px solid #eb3a2a;
 }
 .banner__btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
         height: 53px;
         width: 168px;
         border: 2px solid white;
@@ -96,6 +104,9 @@ margin-left: auto;
 .banner__btn2:active {
     font-size: 15px;
     border: 5px solid #eb3a2a;
+}
+.banner__flex {
+    display: flex;
 }
 @media (max-width: 980px) {
     .banner {

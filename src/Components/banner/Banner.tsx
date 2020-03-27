@@ -14,9 +14,11 @@ const Banner: FC = () => {
  </h1>
  
 <p className={classes.banner__p} >Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+<div className={classes.banner__flex} >
+    <div className={classes.banner__btn} >< strong >Buy This Now</strong> </div>
+    <div className={classes.banner__btn2} >Live Preview</div>
+</div>
 
-<button className={classes.banner__btn} >Buy This Now</button>
-<button className={classes.banner__btn2} >Live Preview</button>
                 </div>
             </div>
         </section>

@@ -8,7 +8,8 @@ import svg1 from '../../img/photos/svg1.svg'
 export const workData = [
     {
         id:1,
-        title: 'See Our Recent Work',
+        title: `  See Our        
+         Recent Work ` ,
         text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus.',
         img: svg1,
         className: 'work__item__three ' 
