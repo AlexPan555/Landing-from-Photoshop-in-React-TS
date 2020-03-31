@@ -1,4 +1,4 @@
-import React, { useReducer, useState} from 'react'
+import React, {useState} from 'react'
 import classes from './Advantages.module.css'
 import {NavLink} from 'react-router-dom'
 import { OrderedMap} from 'immutable'
@@ -7,7 +7,7 @@ import {stateData} from './advantagesStatData'
 
 const Advantages: React.FC = () =>{
 
-const initialState: OrderedMap<string, OrderedMap<string, string | boolean>> =  OrderedMap(stateData).map(item=> OrderedMap(item) )
+const initialState: OrderedMap<string, OrderedMap<string, string | boolean| undefined>> =  OrderedMap(stateData).map(item=> OrderedMap(item) )
     const styleDiv: string = `${classes.advantages} wrap`
 const [state, setState] = useState(initialState)
     return(

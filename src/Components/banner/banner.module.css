@@ -50,9 +50,9 @@ margin-left: auto;
     align-items: center;
     height: 53px;
     width: 168px;
-    border: 5px solid #e5493a;
-    border-radius: 5px;
-    background-color: #e5493a;
+    border: 2px solid white;
+        border-radius: 5px;
+        background-color: #23272a;
         font-size: 14px;
         font-family: "Raleway";
         color: rgb(255, 255, 255);
@@ -66,17 +66,24 @@ margin-left: auto;
         transition-property: background-color border;
         transition-duration: 500ms;
 }
+.banner__btn:focus,.banner__btn2:focus {
+    border: 5px solid #eb3a2a;
+    background-color: #23272a;
+}
+
 .banner__btn:hover {
-    font-size: 16px;
     cursor: pointer;
-    border: 5px solid #c01f11;
-    background-color: #c01f11;
+    border: 3px solid white;
+    font-size: 16px;
 }
 .banner__btn:active {
     font-size: 15px;
     background-color: #eb3a2a;
     border: 5px solid #eb3a2a;
 }
+
+
+
 .banner__btn2 {
     display: flex;
     justify-content: center;
@@ -96,6 +103,7 @@ margin-left: auto;
             transition-property: background-color border;
             transition-duration: 500ms;
 }
+
 .banner__btn2:hover {
     cursor: pointer;
     border: 3px solid white;
@@ -105,6 +113,7 @@ margin-left: auto;
     font-size: 15px;
     border: 5px solid #eb3a2a;
 }
+
 .banner__flex {
     display: flex;
 }
@@ -141,7 +150,7 @@ margin-left: auto;
     .banner__p {
         font-size: 13px;
     }
-    .banner__btn {
+    .banner__btn, .banner__btn2 {
         margin-top: 10px;
         margin-bottom: 10px;
     }

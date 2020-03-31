@@ -7,8 +7,8 @@ import WorksItem from './WorkItem'
 const Works: React.FC = () => {
     const sectionStyle = `${classes.work__wrapp} conteiner`
 
-   const liStyle1 = `${classes.work__item__three} ${classes.work__bg1} `
-   const liStyle2 = `${classes.work__item__six} ${classes.work__bg2} ${classes.work__li}`
+   const liStyle1 = `${classes.work__item__three} ${classes.work__bg1} ${classes.work__li} ${classes.work__first}`
+   const liStyle2 = `${classes.work__item__six} ${classes.work__bg2} ${classes.work__li} `
    const liStyle3 = `${classes.work__item__three} ${classes.work__bg3} ${classes.work__li}`
    const liStyle4 = `${classes.work__item__three} ${classes.work__bg4} ${classes.work__li}`
    const liStyle5 = `${classes.work__item__five} ${classes.work__bg5} ${classes.work__li}`

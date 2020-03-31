@@ -1,9 +1,9 @@
 import React from 'react'
 import {useSpring, animated} from 'react-spring'
 import classes from './Advantages.module.css'
-import { OrderedMap} from 'immutable'
 
 interface IProps {
+  //state: OrderedMap<string, string | boolean| undefined>
   state: any
 }
 
@@ -14,7 +14,6 @@ const AdvantagesItem: React.FC<IProps>  = (props) => {
     const colorRedMotion = useSpring({color: state.get('isOver') ? '#e5493a'  : 'rgb(99, 99, 99)'})
     const colorWhiteMotion = useSpring({color: state.get('isOver') ? 'white'  : 'rgb(99, 99, 99)'})
     const borderRedMotion = useSpring({borderColor: state.get('isOver') ? '#e5493a' : '#353535' })
- console.log(props.state.get('img'));
  
     return(
     <div className={classes.icon} >
