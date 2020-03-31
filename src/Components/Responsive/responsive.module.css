@@ -1,0 +1,106 @@
+.responsive{
+    padding-top: 100px;
+}
+.responsive__wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 5px;
+    padding-bottom: 85px;
+    background: url('../../img/photos/responsive.png') left top no-repeat;
+}
+
+.responsive__info {
+    max-width: 360px;
+    margin-left: auto;
+    margin-top: 35px;
+}
+.responsive__title {
+        font-size: 30px;
+        font-family: "Raleway";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.1;
+        position: relative;
+      }
+.responsive__title::before {
+    position: absolute;
+    content: ' ';
+    height: 2px;
+    width: 70px;
+    background-color: #2f2f2f;
+    display: block;
+    top: -25px;
+    left: 0;
+}
+.responsive__text {
+        margin: 20px 0;
+        font-size: 14px;
+        font-family: "Roboto";
+        color: rgb(70, 70, 70);
+        line-height: 1.429;
+}
+.responsive__ul {
+        margin: 35px 0;
+        font-size: 14px;
+        font-family: "Roboto";
+        color: rgb(149, 149, 149);
+        line-height: 1.286;
+}
+.responsive__li {
+    padding-left: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.responsive__li::before {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    content: ' ';
+    height: 2px;
+    width: 8px;
+    background-color: #e5493a;
+}
+.responsive__btn {
+    font-size: 14px;
+    font-family: "Raleway";
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-transform: uppercase;
+        margin-top: 0px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        background-color: #8dc63f;
+        width: 170px;
+        height: 54px;
+        transition-property: background-color font-size;
+        transition-duration: 500ms;
+}
+.responsive__btn:focus {
+    background-color: #8dc63f;
+    border-color: #e5493a;
+}
+.responsive__btn:hover {
+    cursor: pointer;
+    background-color: #507916;
+}
+.responsive__btn:active {
+    font-size: 16px
+}
+@media(max-width: 980px){
+    .responsive__wrap {
+        background: none;
+    }
+    .responsive__info {
+        margin-left: 20px;
+        max-width: 100%;
+    }
+}
+@media (max-width: 480px){
+    .responsive{
+        padding-top: 50px;
+    }
+    .responsive__wrap{
+        padding-bottom: 40px;
+    }
+}
