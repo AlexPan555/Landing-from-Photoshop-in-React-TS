@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {useSpring, animated} from 'react-spring'
 import NavbarTest from './NavbarTest'
 import TodoForm from './TodoForm'
 import { TodoList } from './TodoList'
@@ -39,17 +40,17 @@ const removeHandler = (id: number)=>{
       setTodos(prev => prev.filter(item=>(item.id !== id)))
    }
    }
-
+   const animatePprops = useSpring({opacity: 1, from: {opacity: 0}})
  return(
-    <div className='bg'>
-      <NavbarTest />
+   <animated.div style={animatePprops} className='bg'>
+         <NavbarTest />
       <div className="container mt2" >
          <TodoForm onAdd={addHandler} />
          <TodoList todos={todos}
              onRemove={removeHandler}
              onTogle={togleHandler} />
       </div>
-    </div>
+   </animated.div>
  )
 }
 

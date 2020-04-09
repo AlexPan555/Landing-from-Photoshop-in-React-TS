@@ -1,8 +1,28 @@
 import React from 'react'
 import classes from './responsive.module.css'
+import Button from '../../UI/Button'
 
 const Responsive = () => {
-
+    const buttonProps = {
+        text: 'Buy This Now',
+        backgroundColor: '#8dc63f',
+        border: '2px solid transparent',
+        width: '170px',
+        height: '54px',
+        marginLeft: 0,
+        fontSize: '14px',
+        fontFamily: "Raleway",
+        color: 'white',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        '&:focus': {
+          borderColor: '#e5493a',
+          backgroundColor: '#8dc63f'
+        },
+        '&:hover': {
+          backgroundColor: '#507916'
+        },
+      }
     return(
         <section className={classes.responsive} >
             <main className={classes.responsive__wrap} >
@@ -17,8 +37,7 @@ const Responsive = () => {
     <li className={classes.responsive__li} >Duis autem vel eum iriure dolor in hendrerit.</li>
     <li className={classes.responsive__li} >Typi non habent claritatem insitam.</li>
 </ul>
-
-<button className={classes.responsive__btn} >Buy This Now</button>
+<Button buttonProps={buttonProps} />
             </div>
             </main>
         </section>

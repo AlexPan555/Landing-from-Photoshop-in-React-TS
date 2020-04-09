@@ -3,7 +3,7 @@ import classes from './banner.module.css'
 
 const Banner: FC = () => {
     const styleDiv = `${classes.banner__wrap} wrap`
-
+   
     return (
         <section className={classes.banner}>
             <div className={styleDiv}>
@@ -15,6 +15,7 @@ const Banner: FC = () => {
  
 <p className={classes.banner__p} >Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
 <div className={classes.banner__flex} >
+  
     <button className={classes.banner__btn} >< strong >Buy This Now</strong> </button>
     <button className={classes.banner__btn2} >Live Preview </button>
 </div>
