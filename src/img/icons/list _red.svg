@@ -1,17 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="29px" height="40px">
-<defs>
-<filter id="Filter_0">
-    <feFlood flood-color="rgb(229, 73, 58)" flood-opacity="1" result="floodOut" />
-    <feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut" />
-    <feBlend mode="normal" in="compOut" in2="SourceGraphic" />
-</filter>
-
-</defs>
-<g filter="url(#Filter_0)">
-<path fill-rule="evenodd"  fill="rgb(0, 0, 0)"
- d="M24.214,0.398 C24.214,0.398 20.961,3.527 17.444,4.789 C-8.602,14.133 2.383,32.341 2.741,32.401 C2.741,32.401 4.202,29.879 6.175,28.440 C18.694,19.312 21.239,8.804 21.239,8.804 C21.239,8.804 18.430,21.448 7.291,29.315 C4.831,31.052 3.166,35.328 2.461,39.601 C2.461,39.601 4.204,38.903 4.954,38.714 C5.247,36.821 5.858,35.009 6.892,33.390 C22.459,35.228 27.557,22.788 28.223,18.449 C29.794,8.204 24.214,0.398 24.214,0.398 Z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="40"><defs><filter id="a"><feFlood flood-color="#E5493A" flood-opacity="1" result="floodOut"/><feComposite operator="atop" in="floodOut" in2="SourceGraphic" result="compOut"/><feBlend in="compOut" in2="SourceGraphic"/></filter></defs><g filter="url(#a)"><path fill-rule="evenodd" d="M24.21.4s-3.25 3.13-6.77 4.39C-8.6 14.13 2.38 32.34 2.74 32.4c0 0 1.46-2.52 3.43-3.96C18.7 19.31 21.25 8.8 21.25 8.8S18.43 21.45 7.29 29.32c-2.46 1.73-4.12 6-4.83 10.28 0 0 1.74-.7 2.5-.89.29-1.89.9-3.7 1.93-5.32 15.57 1.84 20.67-10.6 21.33-14.94C29.8 8.2 24.22.4 24.22.4z"/></g></svg>

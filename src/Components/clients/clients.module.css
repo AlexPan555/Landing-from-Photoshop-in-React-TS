@@ -1,0 +1,98 @@
+.clients {
+    width: 100%;
+    background-color: #202020;
+}
+.clients__wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 115px;
+    padding-bottom: 130px;
+}
+.clients__title {
+        font-size: 30px;
+        font-family: "Raleway";
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 0.933;
+        text-align: center;
+        position: relative;
+}
+.clients__title::before {
+    content: '';
+    height: 2px;
+    width: 70px;
+    background-color: #2f2f2f;
+    display: block;
+    margin: 0 auto;
+   position: absolute;
+   top: -30px;
+   left: 50%;
+   transform: translateX(-50%)
+}
+.clients__text {
+        margin: 0 auto;
+        max-width: 570px;
+        font-size: 14px;
+        font-family: "Roboto";
+        color: rgb(70, 70, 70);
+        line-height: 1.429;
+        text-align: center;
+}
+.clients__carousel {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.arrowWrap {
+    height: 30px;
+    width: 30px;
+    background-color: #272727;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+.arrowWrap:hover {
+    cursor: pointer;
+    background-color: #e5493a;
+}
+.arrowWrap:active {
+    background-color: #c01e0f;
+}
+.arrow__left {
+    position: absolute;
+    right: 0px;
+}
+.arrow__rigth {
+    position: absolute;
+    left: 0px;
+}
+.carousel__item {
+    position: relative;
+   
+}
+.carousel__img {
+    z-index: 1;
+}
+.carousel__dark {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(32,32,32,.8);
+    z-index: 2;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+.carousel__dark:hover {
+    cursor: pointer;
+    background-color: rgba(32,32,32,.1)
+}
+@media(max-width: 480px){
+    .clients__wrap{
+        padding: 40px 0;
+    }
+}

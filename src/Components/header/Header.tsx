@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import classes from './Header.module.css'
-import logo from '../../img/Logos.png'
+import logo from '../../img/icons/Logos.png'
 
 const Header: React.FC = () =>{
     //const styleDiv =  [classes.header__wrap, 'wrap'].join(' ')
