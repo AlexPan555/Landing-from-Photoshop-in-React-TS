@@ -33,7 +33,7 @@ const Skills = () => {
             <div className={classes.skills__leftCol}>
                 <p className={classes.skills__leftTitle} >Our Skills</p>
                 <p className={classes.skills__leftText} >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-              <Button buttonProps={buttonProps}  />
+              <Button buttonProps={buttonProps} handleClick={()=>{}} />
             </div>
             
           <SkillsRigtCol />

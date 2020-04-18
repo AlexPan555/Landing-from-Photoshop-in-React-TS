@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 
 interface IProps {
        buttonProps: React.CSSProperties | any
+      handleClick?(): void
 }
  const WrapButton = (props: IProps) => {
     const useStyles: any = makeStyles((theme: Theme) =>
@@ -15,7 +16,8 @@ interface IProps {
 
   return (
     <div>
-      <Button variant="contained" color="primary" className={classes.button}>
+      <Button variant="contained" color="primary"
+       className={classes.button}onClick={props.handleClick} >
          {props.buttonProps.text}
       </Button>
     </div>

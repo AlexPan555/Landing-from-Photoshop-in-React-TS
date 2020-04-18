@@ -74,3 +74,7 @@ code {
 .work__item__six {
   grid-column: span 6;
 }
+.leaflet-container {
+  height: 470px;
+  width: 570px;
+}
