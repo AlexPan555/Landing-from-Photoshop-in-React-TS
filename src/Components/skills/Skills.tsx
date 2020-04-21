@@ -22,7 +22,7 @@ const Skills = () => {
         backgroundColor: '#252525'
       },
       '&:hover': {
-        backgroundColor: '#474545'
+        backgroundColor: '#000'
       },
     }
 

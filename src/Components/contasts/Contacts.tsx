@@ -47,6 +47,7 @@ const buttonProps = {
     text: 'Send',
     backgroundColor: 'rgb(229, 73, 58)',
     border: '1px solid transparent',
+    borderRadius: '10px',
     fontSize: '20px',
     fontFamily: "Raleway",
     lineHeight: 1.4,
@@ -57,6 +58,9 @@ const buttonProps = {
         backgroundColor: 'rgb(229, 73, 58)'
       },
       '&:hover': {
+        backgroundColor: '#cc0000'
+      },
+      '&:active': {
         backgroundColor: '#cc0000'
       },
 } 

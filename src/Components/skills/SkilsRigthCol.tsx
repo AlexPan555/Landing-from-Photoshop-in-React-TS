@@ -15,7 +15,7 @@ componentDidMount() {
     window.removeEventListener('scroll', this.handleScroll);
 }
     handleScroll=()=>{
-        if(window.scrollY >= 2700 && this.state.stateScroll){
+        if(window.scrollY >= 2500 && this.state.stateScroll){
             this.setState({stateScroll: false})
         }
         if(window.scrollY < 2100 && !this.state.stateScroll){

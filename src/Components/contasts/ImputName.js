@@ -17,8 +17,6 @@ const InutName = ({props, handleChange,setValid}) => {
             height: '60px',
             fontFamily: "Raleway",
             lineHeight: 1.4,
-            maxWidth: '540px',
-            //paddingLeft: '27px',
         }}
         attributesInput={{ // Optional.
           id: props.get('id'),

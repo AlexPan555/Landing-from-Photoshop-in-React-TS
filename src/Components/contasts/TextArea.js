@@ -18,8 +18,6 @@ const TextArea = ({props, handleChanges} ) => {
     height: props.get('height'),
     fontFamily: "Raleway",
     lineHeight: 1.4,
-    maxWidth: '540px',
-    
 }}
   attributesInput={{ // Optional.
     id: props.get('id'),
