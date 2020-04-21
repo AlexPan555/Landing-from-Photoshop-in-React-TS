@@ -12,7 +12,7 @@ const Menu = () => {
             <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >SKILLS </NavLink> </li>  
             <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Blog </NavLink> </li>  
             <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >CLIENTS </NavLink> </li>  
-            <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/test' >Contacts </NavLink> </li>   
+            <li className={classes.menu__element}> <NavLink className={classes.menu__link} to='/' >Contacts </NavLink> </li>   
         </ul>
     )
 }
