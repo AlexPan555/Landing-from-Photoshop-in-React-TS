@@ -23,7 +23,6 @@ const Landing: React.FC = () => {
             <Clients />
             <Contacts />
             <Footer />
-
         </div>
         
     )
